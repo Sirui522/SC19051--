@@ -14,8 +14,8 @@
 EM.R = function(x, N, it_num){
   n = length(x)
   m = N
-  miu <- c(0,1)
-  alpha <- c(0.2,0.8)
+  miu <- rep(0,m)
+  alpha <- rep(1,m)/m
   prob <- matrix(rep(0,n*m),ncol=m)
   for (step in 1:it_num){
     # E step
